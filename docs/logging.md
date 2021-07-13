@@ -13,7 +13,7 @@ In addition, there are two _debug_ flags in the application.properties files tha
 
 So, dev-ops personnel or administators are advised to look in the worker logs to better understand and debug edge cases and errors.
 
-## Error messages and suggested fixes, if any
+## Error messages in code
 
 Most error messages are self-explanatory. Dev-ops and/or administrators may use the stack trace along with the file in which the error appears to determine the best course of action to fix any issues that they're trying to solve. The following is a detailed listing of all error messages (as of 7/1/2021). Here, {0}, {1}, and so on represent placeholders for values that will be filled in at runtime.
 
@@ -23,8 +23,9 @@ Most error messages are self-explanatory. Dev-ops and/or administrators may use 
  - Unable to authenticate!
  - {0}: {1}\n{2}, e.getStatusCode, e.getStatusText, e.getResponseBodyAsString
  - Unable to update item {0}. {1}: {2}\n{3}
- - Unable to delete items {0}. {1}: {2}\n{3}
+ - Unable to delete objects: {0} {1}\n{2}
  - Unable to get data from API
+ - Unable to find search configuration with name {0} in {1} repository
 
 #### Source file: **CodeSetRepositoryExtendedImpl**
  - Attribute {0} is not linked to a codeset
@@ -71,7 +72,6 @@ Most error messages are self-explanatory. Dev-ops and/or administrators may use 
  - Zero records would be in the export. Nothing to do.
  - Could not read {0}. Not converting to Excel.
  - Could not delete {0}
- - Unable to find search configuration with name {0} in {1} repository
  - Could not download assets.
  - Could not rename Value and UOM columns.
  - Saved Set Name is empty when Filter is set to Saved Set. Please fix one of these two parameters. Not applying Saved Set filter.
