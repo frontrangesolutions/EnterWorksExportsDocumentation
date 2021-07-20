@@ -9,4 +9,4 @@
 - Scales horizontally
 
 [Private codebase](https://github.com/frontrangesolutions/OptimizedExports/)
-[Documentation](introduction)
+[Documentation](introduction.md)
