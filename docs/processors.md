@@ -4,7 +4,7 @@ The java project for *export-worker* is designed to be a set of classes called *
 
 ## Export types built for AD
 
-The following export types are built specifically for Affiliated Distributors
+The following export types are built specifically for Affiliated Distributors. These classes use the Core components to extract data from specific repositories, transform them based on the configuration options and create datasets in the requested formats.
 
  - **CategoryAttributeMetadataExportService:** Provides an extract of the category attribute metadata for the hierarchy based on Member ID or specifically requested using Export Configuration. Each line in the export represents one attribute of a taxonomy node. The following columns are included in the export:
    - TaxonomyName
@@ -165,15 +165,15 @@ Global attribute mapping is a list of global columns that are being requested as
 
 | Name | Data Type | Is Required | Code Set and Comments |
 |---|---|---|---|
-| Column Sequence | BIGINT | Yes |  |
-| Display/Column Name | VARCHAR |  |  |
-| Value Type | VARCHAR | Yes | Value Type - depending on this selection, one of the next three options will be required. |
-| Static Value | VARCHAR |  |  |
-| Attribute Name | VARCHAR |  | AttributeName |
-| Special Global Column | VARCHAR |  | SpecialGlobalColumn |
-| Multivalue Separator | VARCHAR |  |  |
-| Value Prefix | VARCHAR |  |  |
-| Value Suffix | VARCHAR |  |  |
+| Column Sequence | Number | Yes |  |
+| Display/Column Name | Text |  |  |
+| Value Type | Text | Yes | Value Type - depending on this selection, one of the next three options will be required. |
+| Static Value | Text |  |  |
+| Attribute Name | Text |  | AttributeName |
+| Special Global Column | Text |  | SpecialGlobalColumn |
+| Multivalue Separator | Text |  |  |
+| Value Prefix | Text |  |  |
+| Value Suffix | Text |  |  |
 
 ### Special attribute columns
 
@@ -186,6 +186,9 @@ The Item Data and Digital Assets export for AD contains a configuration option w
  - Wholesaler
 
 ## Core processor components
+
+These classes provide a set of core actions or services that can be configured and weaved together to extract data and transform it based on configuration options requested from the UI.
+
  - AddStaticColumns
  - AggregateRows
  - CoalesceColumns
